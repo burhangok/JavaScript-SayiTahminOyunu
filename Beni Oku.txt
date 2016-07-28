@@ -1,0 +1,8 @@
+JAVASCRIPT ÝLE SAYI TAHMÝN OYUNU
+
+Yeni html ve JavaScript öðrenenler için geliþtirilen bu projede, basit sayý tahmin etme oyunu geliþtirildi. HTML yapýsýnýn yanýnda temel düzeyde JavaScript deðiþken ve fonksiyonlarýnýn kullanýmýný görebilirsiniz. Temel düzeyde DOM kullanýmý ile HTML ve JavaScript arasýnda veri alýþveriþinide görebilirsiniz.
+
+Açýklama satýrlarýndan ve kodlamada kullanýlan standartlardan dolayý projeyi geliþtirebilir ya da GNU MIT Open Source Licence kapsamýnda kullanabilirsiniz. Proje hakkýnda görüþleriniz ve sorularýnýz için burhangok@yahoo.com adresine mail atabilirsiniz.
+
+Burhan GÖK
+burhangok@yahoo.com

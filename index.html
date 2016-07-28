@@ -1,0 +1,98 @@
+﻿<html>
+
+<head>
+
+				<script type="text/javascript">
+				
+					// hosgeldin mesaji icin kullanici adi aliniyor.
+					var kullaniciAdi = prompt("Kullanıcı Adınızı Giriniz","");
+				
+					
+					//1 ile 100 arasında Math ile rastgele sayi uretiliyor.
+					var rastgeleSayi = parseInt(( Math.random() * 100 ) + 1);
+					
+					/*
+
+					  kontrol icin rastgele sayiyi ekranda gosterebiliriz
+					  document.write(rastgeleSayi);
+					
+					*/
+					
+					// metin kutusuna tiklanildiginda calisan sayiyi kontrol etme fonksiyonu
+				    // girilen sayiyi alip bir degiskene atar
+					// rastgeleSayi degiskeni ile girilen sayiyi kontrol eder
+					function kontrolEt() 
+					{
+					
+					//girilenSayi id'ye sahip inputun değeri alınıyor.
+					var gelenSayi = document.getElementById("girilenSayi").value;
+					
+					/*gelenSayi ile rastgele olusturulan sayi karsilastiriliyor
+					  ve ona göre kullaniciya sonuc gosteriliyor.	
+					*/
+					if (gelenSayi > rastgeleSayi) {
+					
+						alert("daha küçük sayı gir");
+						document.getElementById("girilenSayi").value=null;
+					
+					}
+					
+					else if (gelenSayi < rastgeleSayi) {
+					
+						alert ("DAHA BÜYÜK SAYI GİR");
+						document.getElementById("girilenSayi").value=null;
+					
+					}
+					
+					else if (gelenSayi == rastgeleSayi){
+					
+						alert("TEBRİKLER SAYIYI BULDUN ! SAYI : " + rastgeleSayi );
+						document.getElementById("girilenSayi").value=null;
+						
+						
+						//rastgele sayi yeniden olusturuluyor ve oyuna devam edilebilir
+						//1 ile 100 arasında Math ile rastgele sayi uretiliyor.
+						rastgeleSayi = parseInt(( Math.random() * 100 ) + 1);
+						
+						
+					}
+					
+					};
+				
+				</script>
+
+</head>
+	
+				<body>
+				
+			<center>
+				
+				<br/>
+				
+				<!-- JavaScript Document Write ile giriste prompt ile alinan kullanici adi 
+					 hosgeldin mesaji ile birlikte ekrana yazdirilyor.	-->
+				
+				<h2><script>document.write("Hoşgeldin " + kullaniciAdi+ " :)");</script></h2> 
+				
+				<h2 style="margin-top:50px; color:orange;">TUTTUĞUM SAYIYI TAHMİN ET ?</h2>
+
+				<form autocomplete="off" >
+				
+				<label>1 ile 100 arası bir sayı gir</label><br/><br/>
+				
+				<!-- Kullanicinin girdigi deger id ile onclick'te belirtilen fonksiyon araciligiyla 
+					 JavaScript tarafina aktariliyor. Burada DOM ile JavaScript ile html arasinda
+					 veri alisverisi islemi yapiyoruz. DOM ile html etiketler olusturabilir ya da 
+					 uzerinde duzeltmeler yapabilirsiniz.Bircok fonksiyon bulunmaktadır.
+				-->
+				<input type="text" id="girilenSayi" onclick="kontrolEt()" autofocus /><br/>
+
+				</form>
+
+			</center>
+
+	</body>
+
+
+
+</html>
